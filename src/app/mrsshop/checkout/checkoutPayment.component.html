@@ -1,0 +1,39 @@
+<div class="navbar bg-inverse ">
+    <a class="navbar-brand text-white">SPORTS STORE</a>
+</div>
+
+<h2 class="text-center mt-1">Step 2: Payment</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6" style="margin:auto;">
+        <img src="../../../assets/images/bkash.jpg" alt="Payment instruction" />
+    </div>
+  </div>
+</div>
+<form novalidate #paymentForm="ngForm">
+    <div class="form-group col-md-3">
+      <label>Bkash Transaction ID</label>
+        <input #transId="ngModel" name="transId" class="form-control"
+               [(ngModel)]="order.payment.transId" required />
+        <div *ngIf="transId.invalid" class="text-danger">
+          Please enter your Transaction Id
+        </div>
+    </div>
+    <div class="form-group col-md-3">
+        <label>Security Code</label>
+        <input #cardCode="ngModel" name="cardCode" class="form-control"
+               [(ngModel)]="order.payment.cardSecurityCode" required />
+        <div *ngIf="cardCode.invalid" class="text-danger">
+            Please enter your security code
+        </div>
+    </div>
+    <div class="text-center pt-2 col-md-3">
+        <button class="btn btn-outline-primary" routerLink="/checkout/step1">
+            Back
+        </button>
+        <button class="btn btn-danger" [disabled]="paymentForm.invalid"
+                routerLink="/checkout/step3">
+            Next
+        </button>
+    </div>
+</form>

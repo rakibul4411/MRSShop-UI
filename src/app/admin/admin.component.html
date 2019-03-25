@@ -1,0 +1,60 @@
+<div id="top-header">
+  <div class="container-fluid" style="height: 14px">
+    <ul class="header-links pull-left">
+      <li><h4 style="color:azure;">MRSShop Admin Panel</h4></li>
+      <li>
+        <button class="btn btn-block btn-outline-info" routerLink="/admin"
+                routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          Overview
+        </button>
+      </li>
+      <li>
+        <button class="btn btn-block btn-outline-info" routerLink="/admin/products"
+                routerLinkActive="active">
+          Products
+        </button>
+      </li>
+      <li>
+        <button class="btn btn-block btn-outline-info" routerLink="/admin/orders"
+                routerLinkActive="active">
+          Orders
+        </button>
+      </li>
+    </ul>
+    <ul class="header-links pull-right">
+      <li *ngIf="user" style="color: white;">
+        <span>{{this.userName}}</span> ||
+        <a href="/mrsshop" (click)="Logout()"> <span><i class="fas fa-sign-out-alt"></i></span>Log Out</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="col p-2">
+  <router-outlet></router-outlet>
+</div>
+<!--<div class="container-fluid">
+  <div class="row">
+    <div>
+      <img src="" alt="wellcome page" />
+    </div>
+  </div>
+</div>-->
+  <!--<div class="row no-gutters">
+    <div class="col-3">
+      <button class="btn btn-block btn-outline-info" routerLink="/admin"
+              routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        Overview
+      </button>
+      <button class="btn btn-block btn-outline-info" routerLink="/admin/products"
+              routerLinkActive="active">
+        Products
+      </button>
+      <button class="btn btn-block btn-outline-info" routerLink="/admin/orders"
+              routerLinkActive="active">
+        Orders
+      </button>
+    </div>
+    <div class="col p-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>-->

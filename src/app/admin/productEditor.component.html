@@ -1,0 +1,45 @@
+<div class="form-group">
+  <label>Name</label>
+  <input class="form-control" [(ngModel)]="product.name" />
+</div>
+<div class="form-group">
+  <label>Category</label>
+  <input class="form-control" [(ngModel)]="product.category" />
+</div>
+<div class="form-group">
+  <label>Feature</label>
+  <input class="form-control" [(ngModel)]="product.feature" />
+</div>
+<div class="form-group">
+  <label>Description</label>
+  <textarea class="form-control" [(ngModel)]="product.description"></textarea>
+</div>
+
+<div class="form-group">
+  <label>stock</label>
+  <input class="form-control" [(ngModel)]="product.stock" />
+</div>
+
+<div class="form-group">
+  <label>minStocklevel</label>
+  <input class="form-control" [(ngModel)]="product.minStocklevel" />
+</div>
+<div class="form-group">
+  <label>Prchase Stock</label>
+  <input class="form-control" [(ngModel)]="product.prchaseStock" />
+</div>
+<!--<div class="form-group">
+  <label>imagePath</label>
+  <input class="form-control" type="file" (change)="onFileChange($event)" />
+</div>-->
+<div class="form-group">
+  <label>Price</label>
+  <input class="form-control" [(ngModel)]="product.price" />
+</div>
+<div class="form-group">
+  <label>Supplier</label>
+  <select class="form-control" [(ngModel)]="product.supplier"
+          [compareWith]="compareSuppliers">
+    <option *ngFor="let s of suppliers" [ngValue]="s">{{s.name}}</option>
+  </select>
+</div>

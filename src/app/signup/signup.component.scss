@@ -1,0 +1,55 @@
+// shared css for the login and signup page
+/*@import "../login/login.component.scss";
+
+.signup-page{
+  border: none!important;
+  background-color: lightgray;
+}
+input.ng-invalid.ng-dirty {
+  border-bottom-color: #D10024 !important;
+  box-shadow: 0 1px 0 0 #e91e63 !important;
+}
+.reg{
+  background-color: #404f43;
+ // margin: 0 ;
+  font-family: 'Bell MT';
+  font-style: italic;
+  padding: 15px;
+}
+
+.regform {
+  border: 2px solid #fff;
+  background-color: #422b2b;
+}
+.input-lg {
+  height: 46px;
+  padding: 10px 46px!important;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 0;
+}
+.sbanner{
+  height: 100%;
+  width: 100%;
+}
+footer{
+  background: #f1f1f1;
+}*/
+
+.register {
+  margin: auto !important;
+  position: center;
+}
+.reghead{
+  /*background-image: url("../../assets/images/regbanner.jpg");*/
+}
+form > div {
+  float: left;
+}
+form, label, input{
+  margin: 0;
+  //padding: 0;
+}
+label{
+  line-height: 0;
+}
